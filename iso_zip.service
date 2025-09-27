@@ -1,0 +1,16 @@
+[Unit]
+Description=ZipMasterBot
+After=syslog.target
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=2s
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/Directory/
+ExecStart=/home/Directory/venv/bin/python /home/Directory/zip.py
+
+[Install]
+WantedBy=multi-user.target
